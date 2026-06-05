@@ -26,6 +26,11 @@
      vim
      gh
      pkgs.go
+     (writeShellScriptBin "php82" ''exec ${php82}/bin/php "$@"'')
+     (writeShellScriptBin "php83" ''exec ${php83}/bin/php "$@"'')
+     (writeShellScriptBin "php84" ''exec ${php84}/bin/php "$@"'')
+     (writeShellScriptBin "php"   ''exec ${php84}/bin/php "$@"'')
+     php84Packages.composer
   ];
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
