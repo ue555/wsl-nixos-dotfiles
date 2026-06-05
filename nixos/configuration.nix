@@ -16,6 +16,8 @@
   wsl.enable = true;
   wsl.defaultUser = "nixos";
 
+  programs.nix-ld.enable = true;
+
   environment.systemPackages = with pkgs; [
      nodejs_latest
      curl
