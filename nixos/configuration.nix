@@ -18,6 +18,10 @@
 
   programs.nix-ld.enable = true;
 
+  environment.extraInit = ''
+    export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+  '';
+
   environment.systemPackages = with pkgs; [
      nodejs_latest
      curl
